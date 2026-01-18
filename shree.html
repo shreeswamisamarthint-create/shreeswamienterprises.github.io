@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shree Swami Developer | Premium Konkan Real Estate</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --primary:#071813;
+  --secondary:#0f2d23;
+  --accent:#d4af37;
+  --text:#eaeaea;
+  --glass:rgba(255,255,255,.07);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--primary);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(7,24,19,.85);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 50px;
+}
+
+nav .brand{
+  font-weight:600;
+  color:var(--accent);
+  font-size:18px;
+}
+
+nav a{
+  color:#ddd;
+  text-decoration:none;
+  margin-left:24px;
+  font-size:15px;
+}
+
+nav a:hover{color:var(--accent);}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(7,24,19,.75),rgba(7,24,19,.95)),
+    url("https://www.saffronstays.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2F5tgxhsqev%2Fsaffronstays-media%2Fcollections%2Fc2cufnugdvhtv7fm9ljk%3Ftr%3Df-auto%2Cq-80&w=3840&q=75") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:60px;
+  color:var(--accent);
+}
+
+.hero p{
+  max-width:820px;
+  font-size:20px;
+  color:#ddd;
+  margin:25px auto 40px;
+}
+
+.primary-btn{
+  display:inline-block;
+  padding:16px 42px;
+  background:linear-gradient(135deg,var(--accent),#f5e3a1);
+  color:#000;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:600;
+}
+
+/* SECTIONS */
+.section{
+  max-width:1200px;
+  margin:120px auto;
+  padding:0 25px;
+}
+
+.section h2{
+  font-family:'Playfair Display',serif;
+  font-size:40px;
+  color:var(--accent);
+  margin-bottom:30px;
+  text-align:center;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:var(--glass);
+  backdrop-filter:blur(14px);
+  padding:38px;
+  border-radius:26px;
+  transition:.4s ease;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 55px rgba(0,0,0,.5);
+}
+
+.card h3{color:var(--accent);}
+.card p{color:#ccc;font-size:15px}
+
+/* IMAGE GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.gallery img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:22px;
+  transition:.4s ease;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+  box-shadow:0 25px 45px rgba(0,0,0,.45);
+}
+
+/* CONTACT */
+.contact{text-align:center;}
+.contact p{font-size:18px}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  color:white;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  box-shadow:0 12px 30px rgba(0,0,0,.45);
+}
+
+/* FOOTER */
+footer{
+  background:#030c09;
+  text-align:center;
+  padding:35px;
+  color:#aaa;
+  font-size:14px;
+}
+
+@media(max-width:768px){
+  .hero h1{font-size:42px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">Shree Swami Developer</div>
+  <div>
+    <a href="#overview">Overview</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>Premium Farmhouse Plots in Konkan</h1>
+    <p>
+      Invest in legally clear, strategically located farmhouse plots surrounded by nature,
+      peace, and long-term appreciation.
+    </p>
+    <a class="primary-btn" href="#contact">Book Site Visit</a>
+  </div>
+</section>
+
+<section id="overview" class="section">
+  <h2>Project Overview</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Clear Legal Title</h3>
+      <p>100% verified ownership with immediate registration.</p>
+    </div>
+    <div class="card">
+      <h3>Prime Konkan Location</h3>
+      <p>Near Dighi Port and upcoming growth corridors.</p>
+    </div>
+    <div class="card">
+      <h3>Farmhouse Ready</h3>
+      <p>Perfect for mango, cashew, coconut plantations.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <h2>Project Gallery</h2>
+  <div class="gallery">
+    <img src="https://tourdefarm.in/wp-content/uploads/2021/01/Best-Farmstays-in-Konkan-banner1-1.jpg">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d3/23/c9/hotel-konkan-dreamz.jpg?w=700&h=400&s=1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZnRh-5FPikpWzjPOlz4qY2fzcKw3tXE5niA&s">
+ 
+  </div>
+</section>
+
+<section id="highlights" class="section">
+  <h2>Investment Highlights</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Affordable Pricing</h3>
+      <p>₹1,00,000 per Guntha. Flexible sizes available.</p>
+    </div>
+    <div class="card">
+      <h3>Direct Developer Deal</h3>
+      <p>No brokerage. Transparent process.</p>
+    </div>
+    <div class="card">
+      <h3>High Appreciation</h3>
+      <p>Ideal for long-term asset growth.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <h2>Contact Us</h2>
+  <p>
+    📞 9619160660 | 9503965461<br>
+    📧 shreeswamisamarth@gmail.com
+  </p>
+  <a class="primary-btn" href="https://wa.me/919619160660" target="_blank">
+    Enquire on WhatsApp
+  </a>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919619160660" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<footer>
+© 2026 Shree Swami Developer • All Rights Reserved
+</footer>
+
+</body>
+</html>
