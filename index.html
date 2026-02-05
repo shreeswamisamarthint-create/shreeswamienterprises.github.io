@@ -147,10 +147,11 @@ input, select{
 </section>
 
 <section id="visit-form" class="section">
-  <h2>Book Your Site Visit</h2>
+  <h2>Book Your Konkan Site Visit 🌿</h2>
 
-  <form id="leadForm">
-    <input type="hidden" name="_subject" value="New Konkan Land Enquiry">
+  <form action="https://formsubmit.co/leadreciever@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Konkan Farm Plot Enquiry">
     <input type="hidden" name="_template" value="table">
 
     <label>Full Name</label>
@@ -164,6 +165,7 @@ input, select{
 
     <label>City (Maharashtra)</label>
     <select name="City" required>
+      <option value="">Select City</option>
       <option>Mumbai</option><option>Pune</option><option>Nagpur</option><option>Nashik</option>
       <option>Thane</option><option>Navi Mumbai</option><option>Kolhapur</option><option>Ratnagiri</option>
       <option>Sindhudurg</option><option>Satara</option><option>Sangli</option>
@@ -172,25 +174,17 @@ input, select{
     <label>Age</label>
     <input name="Age">
 
-    <button class="primary-btn" style="width:100%">Submit</button>
+    <button class="primary-btn" style="width:100%">Request Site Visit</button>
   </form>
 </section>
 
-<script>
-document.getElementById("leadForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  fetch("https://formsubmit.co/ajax/shreeswamisamarth@gmail.com", {
-    method: "POST",
-    body: new FormData(this)
-  }).then(response => {
-    alert("Thank you! We will contact you shortly.");
-    this.reset();
-  });
-});
-</script>
+<footer style="text-align:center;padding:30px;color:#aaa;">
+© 2026 Shree Swami Developer
+</footer>
 
 </body>
 </html>
+
 
 
 
