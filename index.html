@@ -132,7 +132,7 @@ nav a:hover{color:var(--accent);}
 .card h3{color:var(--accent);}
 .card p{color:#ccc;font-size:15px}
 
-/* IMAGE GALLERY */
+/* GALLERY */
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -144,17 +144,25 @@ nav a:hover{color:var(--accent);}
   height:220px;
   object-fit:cover;
   border-radius:22px;
-  transition:.4s ease;
 }
 
-.gallery img:hover{
-  transform:scale(1.05);
-  box-shadow:0 25px 45px rgba(0,0,0,.45);
+/* FORM */
+label{
+  display:block;
+  margin-bottom:6px;
+  color:#d4af37;
+  font-size:14px;
 }
 
-/* CONTACT */
-.contact{text-align:center;}
-.contact p{font-size:18px}
+input, select{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.15);
+  background:rgba(0,0,0,0.3);
+  color:#fff;
+  margin-bottom:25px;
+}
 
 /* WHATSAPP */
 .whatsapp{
@@ -170,7 +178,6 @@ nav a:hover{color:var(--accent);}
   align-items:center;
   justify-content:center;
   font-size:30px;
-  box-shadow:0 12px 30px rgba(0,0,0,.45);
 }
 
 /* FOOTER */
@@ -179,11 +186,6 @@ footer{
   text-align:center;
   padding:35px;
   color:#aaa;
-  font-size:14px;
-}
-
-@media(max-width:768px){
-  .hero h1{font-size:42px}
 }
 </style>
 </head>
@@ -195,86 +197,78 @@ footer{
   <div>
     <a href="#overview">Overview</a>
     <a href="#gallery">Gallery</a>
-    <a href="#highlights">Highlights</a>
-    <a href="#contact">Contact</a>
+    <a href="#visit-form">Book Visit</a>
   </div>
 </nav>
 
 <section class="hero">
   <div>
-    <h1>Premium Farmhouse Plots in Konkan</h1>
-    <p>
-      Invest in legally clear, strategically located farmhouse plots surrounded by nature,
-      peace, and long-term appreciation.
-    </p>
-    <a class="primary-btn" href="#contact">Book Site Visit</a>
+    <h1>Your Dream Home in the Heart of Konkan 🌴</h1>
+    <p>Peace, greenery and future wealth — all in one perfect land 🌊</p>
+    <a class="primary-btn" href="#visit-form">Book Site Visit</a>
   </div>
 </section>
 
 <section id="overview" class="section">
-  <h2>Project Overview</h2>
+  <h2>Why Choose Us</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Clear Legal Title</h3>
-      <p>100% verified ownership with immediate registration.</p>
-    </div>
-    <div class="card">
-      <h3>Prime Konkan Location</h3>
-      <p>Near Dighi Port and upcoming growth corridors.</p>
-    </div>
-    <div class="card">
-      <h3>Farmhouse Ready</h3>
-      <p>Perfect for mango, cashew, coconut plantations.</p>
-    </div>
+    <div class="card"><h3>100% Legal</h3><p>Clear title and instant registration.</p></div>
+    <div class="card"><h3>Prime Location</h3><p>High growth Konkan belt.</p></div>
+    <div class="card"><h3>Emotional Value</h3><p>A peaceful family legacy 🌴</p></div>
   </div>
 </section>
 
 <section id="gallery" class="section">
-  <h2>Project Gallery</h2>
+  <h2>Konkan Lifestyle</h2>
   <div class="gallery">
     <img src="https://tourdefarm.in/wp-content/uploads/2021/01/Best-Farmstays-in-Konkan-banner1-1.jpg">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d3/23/c9/hotel-konkan-dreamz.jpg?w=700&h=400&s=1">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d3/23/c9/hotel-konkan-dreamz.jpg">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZnRh-5FPikpWzjPOlz4qY2fzcKw3tXE5niA&s">
- 
   </div>
 </section>
 
-<section id="highlights" class="section">
-  <h2>Investment Highlights</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Affordable Pricing</h3>
-      <p>₹1,00,000 per Guntha. Flexible sizes available.</p>
-    </div>
-    <div class="card">
-      <h3>Direct Developer Deal</h3>
-      <p>No brokerage. Transparent process.</p>
-    </div>
-    <div class="card">
-      <h3>High Appreciation</h3>
-      <p>Ideal for long-term asset growth.</p>
-    </div>
-  </div>
-</section>
+<section id="visit-form" class="section">
+  <h2>Book Your Konkan Site Visit 🌿</h2>
 
-<section id="contact" class="section contact">
-  <h2>Contact Us</h2>
-  <p>
-    📞 9619160660 | 9503965461<br>
-    📧 shreeswamisamarth@gmail.com
-  </p>
-  <a class="primary-btn" href="https://wa.me/919619160660" target="_blank">
-    Enquire on WhatsApp
-  </a>
+  <form action="https://formsubmit.co/shreeswamisamarth@gmail.com" method="POST" style="max-width:700px;margin:auto;background:rgba(255,255,255,0.05);padding:50px;border-radius:30px;">
+    <input type="hidden" name="_captcha" value="false">
+
+    <label>Full Name</label>
+    <input name="Name" required>
+
+    <label>Mobile Number</label>
+    <input name="Phone" required>
+
+    <label>Email</label>
+    <input name="Email">
+
+    <label>City (Maharashtra)</label>
+    <select name="City" required>
+      <option value="">Select your city</option>
+      <option>Mumbai</option><option>Pune</option><option>Nagpur</option><option>Nashik</option>
+      <option>Thane</option><option>Navi Mumbai</option><option>Kalyan</option><option>Dombivli</option>
+      <option>Amravati</option><option>Aurangabad</option><option>Kolhapur</option><option>Solapur</option>
+      <option>Sangli</option><option>Satara</option><option>Ratnagiri</option><option>Sindhudurg</option>
+      <option>Raigad</option><option>Palghar</option><option>Jalgaon</option><option>Dhule</option>
+      <option>Nanded</option><option>Latur</option><option>Beed</option><option>Osmanabad</option>
+      <option>Wardha</option><option>Yavatmal</option><option>Buldhana</option><option>Akola</option>
+      <option>Chandrapur</option><option>Gondia</option><option>Hingoli</option><option>Parbhani</option>
+    </select>
+
+    <label>Age</label>
+    <input name="Age">
+
+    <button class="primary-btn" style="width:100%">Request Site Visit</button>
+  </form>
 </section>
 
 <a class="whatsapp" href="https://wa.me/919619160660" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<footer>
-© 2026 Shree Swami Developer • All Rights Reserved
-</footer>
+<footer>© 2026 Shree Swami Developer</footer>
 
 </body>
 </html>
+
+
