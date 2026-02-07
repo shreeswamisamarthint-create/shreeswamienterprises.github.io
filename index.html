@@ -2,204 +2,253 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Shree Swami Developer | Konkan Farmhouse Plots</title>
+<title>Shree Swami Developer | Konkan Luxury Plots</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap');
 
 :root{
 --gold:#d4af37;
---dark:#040b09;
+--glass:rgba(255,255,255,.08);
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Inter;background:var(--dark);color:white;scroll-behavior:smooth;}
+/* Sticky Sea Background */
+body{
+margin:0;
+font-family:Inter;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.9)),
+url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80")
+center/cover fixed;
+}
 
+/* NAVBAR */
 nav{
-position:fixed;top:0;width:100%;z-index:1000;
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 50px;
 background:rgba(0,0,0,.6);
 backdrop-filter:blur(10px);
-display:flex;justify-content:space-between;align-items:center;
-padding:15px 40px;
 }
+nav a{color:white;text-decoration:none;margin-left:25px;font-size:14px;}
 
-nav a{color:white;text-decoration:none;margin-left:20px;font-size:14px;}
-
+/* HERO */
 .hero{
 min-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.9)),
-url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80") center/cover fixed;
-display:flex;align-items:center;justify-content:center;text-align:center;
-padding:40px;
-}
-
-.hero h1{font-family:'Playfair Display';font-size:64px;color:var(--gold);}
-.hero p{max-width:800px;font-size:22px;margin:25px auto;}
-
-.btn{
-background:linear-gradient(135deg,var(--gold),#f7e7a5);
-padding:18px 45px;border-radius:50px;
-color:#000;text-decoration:none;font-weight:600;display:inline-block;
-}
-
-.section{max-width:1200px;margin:auto;padding:120px 20px;}
-h2{text-align:center;color:var(--gold);font-family:'Playfair Display';font-size:42px;margin-bottom:40px;}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;}
-
-.card{
-background:rgba(255,255,255,.1);
-padding:35px;border-radius:25px;
-backdrop-filter:blur(15px);
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
+}
+.hero h1{
+font-family:'Playfair Display';
+font-size:70px;
+color:var(--gold);
+text-shadow:0 20px 80px black;
+}
+.hero p{font-size:22px;max-width:700px;margin:25px auto;}
+
+/* BUTTON */
+.btn{
+background:linear-gradient(135deg,var(--gold),#f8e7a1);
+padding:18px 50px;
+border-radius:50px;
+color:black;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 0 40px rgba(212,175,55,.6);
+}
+
+/* SECTIONS */
+.section{
+max-width:1300px;
+margin:auto;
+padding:120px 20px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+}
+
+/* INFO BOXES */
+.card{
+background:var(--glass);
+padding:60px 40px;
+border-radius:30px;
+backdrop-filter:blur(18px);
 transition:.4s ease;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.5);
 }
-.card:hover{transform:translateY(-15px);}
-
-/* Why Konkan */
-.why-section{
-background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
-url("https://images.unsplash.com/photo-1587620931283-d91d4f10a55b?auto=format&fit=crop&w=1920&q=80") center/cover fixed;
-padding:140px 20px;
+.card:hover{
+transform:translateY(-15px);
+box-shadow:0 40px 80px rgba(212,175,55,.35);
 }
 
-/* Gallery */
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
-.gallery img{width:100%;height:260px;object-fit:cover;border-radius:20px;}
-
-/* Form */
-.form-section{
-background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
-url("https://images.unsplash.com/photo-1544986581-efac024faf62?auto=format&fit=crop&w=1920&q=80") center/cover fixed;
-padding:140px 20px;
+/* PRICE TAG */
+.price-tag{
+display:inline-block;
+margin-bottom:15px;
+background:linear-gradient(135deg,var(--gold),#f8e7a1);
+color:black;
+padding:8px 18px;
+border-radius:30px;
+font-weight:600;
 }
 
-form{
-max-width:520px;margin:auto;
+/* GALLERY WITH PRICE */
+.gallery-item{
+position:relative;
+overflow:hidden;
+border-radius:25px;
+}
+.gallery-item img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:25px;
+transition:.5s;
+}
+.gallery-item:hover img{transform:scale(1.05);}
+
+.plot-price{
+position:absolute;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+background:linear-gradient(135deg,#d4af37,#f8e7a1);
+color:black;
+padding:10px 22px;
+border-radius:30px;
+font-weight:700;
+font-size:16px;
+box-shadow:0 15px 40px rgba(0,0,0,.6);
+}
+
+/* VIDEO */
+video{
+width:100%;
+border-radius:25px;
+box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+/* FORM */
+.form-box{
+max-width:600px;
+margin:auto;
 background:rgba(0,0,0,.75);
-padding:45px;border-radius:30px;
+padding:60px;
+border-radius:30px;
 backdrop-filter:blur(20px);
 }
-
 input,select{
-width:100%;padding:15px;margin-bottom:18px;
-border:none;border-radius:12px;background:#111;color:white;
+width:100%;
+padding:16px;
+margin-bottom:18px;
+border:none;
+border-radius:12px;
+background:#111;
+color:white;
 }
 
-.floating-btn{
-position:fixed;bottom:25px;left:25px;
-background:linear-gradient(135deg,var(--gold),#f5e3a1);
-color:black;padding:16px 28px;border-radius:50px;
-font-weight:600;z-index:1000;text-decoration:none;
-}
-
+/* WHATSAPP */
 .whatsapp{
-position:fixed;bottom:25px;right:25px;
-width:60px;height:60px;background:#25D366;
-border-radius:50%;display:flex;align-items:center;justify-content:center;
-font-size:30px;color:white;
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+color:white;
+z-index:999;
 }
 
-footer{text-align:center;padding:30px;background:#000;color:#aaa;}
+footer{text-align:center;padding:40px;background:rgba(0,0,0,.6);}
 </style>
 </head>
 
 <body>
 
 <nav>
-<div style="color:var(--gold);font-weight:600;">Shree Swami Developer</div>
+<div style="color:var(--gold);font-weight:600;">SHREE SWAMI DEVELOPER</div>
 <div>
-<a href="#why">Why Konkan</a>
+<a href="#why">Why</a>
 <a href="#gallery">Gallery</a>
+<a href="#videos">Videos</a>
 <a href="#form">Book Visit</a>
 </div>
 </nav>
 
-<a href="#form" class="floating-btn">Book Site Visit 🌴</a>
-
 <section class="hero">
 <div>
-<h1>Own a Slice of Konkan Paradise</h1>
-<p>Sea breeze, green hills & high returns — Konkan is your future 🌊💰</p>
+<h1>Luxury Farmhouse Plots in Konkan</h1>
+<p>Sea breeze, green hills & high-return investment 🌴</p>
 <a href="#form" class="btn">Book Site Visit</a>
 </div>
 </section>
 
-<section id="why" class="why-section">
-<h2>Why Smart Investors Choose Konkan</h2>
+<section id="why" class="section">
+<h2 style="text-align:center;color:var(--gold);font-size:46px;">Why Konkan</h2>
 <div class="grid">
-<div class="card">🌊 Rising Beach Tourism</div>
-<div class="card">🥭 Mango & Cashew Income</div>
-<div class="card">🚧 Mumbai-Goa Highway Growth</div>
-<div class="card">🧘 Zero Pollution Lifestyle</div>
+<div class="card"><div class="price-tag">₹8L Onwards</div>🌊 Beach Tourism</div>
+<div class="card"><div class="price-tag">Plantation</div>🥭 Mango & Cashew</div>
+<div class="card"><div class="price-tag">High ROI</div>🚧 Mumbai–Goa Highway</div>
+<div class="card"><div class="price-tag">Pure Living</div>🧘 Zero Pollution</div>
 </div>
 </section>
 
 <section id="gallery" class="section">
-<h2>Konkan Beauty</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-<img src="https://images.unsplash.com/photo-1587620931283-d91d4f10a55b">
-<img src="https://images.unsplash.com/photo-1544986581-efac024faf62">
+<h2 style="text-align:center;color:var(--gold);font-size:46px;">Project Gallery</h2>
+<div class="grid">
+<div class="gallery-item"><img src="d:\website\3.jpg.jpeg"><div class="plot-price">₹60,000 / Guntha</div></div>
+<div class="gallery-item"><img src="d:\website\4.jpg.jpeg"><div class="plot-price">₹60,000 / Guntha</div></div>
+<div class="gallery-item"><img src="d:\website\5.jpg.jpeg"><div class="plot-price">₹60,000 / Guntha</div></div>
+<div class="gallery-item"><img src="d:\website\6.jpg.jpeg"><div class="plot-price">₹60,000 / Guntha</div></div>
+<div class="gallery-item"><img src="d:\website\7.jpg.jpeg"><div class="plot-price">₹60,000 / Guntha</div></div>
 </div>
 </section>
 
-<section id="form" class="form-section">
-<h2>Book Your Konkan Visit</h2>
-<form action="https://formsubmit.co/leadreciever@gmail.com" method="POST">
-<input type="hidden" name="_captcha" value="false">
+<section id="videos" class="section">
+<h2 style="text-align:center;color:var(--gold);font-size:46px;">Site Walkthrough</h2>
+<div class="grid">
+<video controls src="d:\website\video1.mp4.mp4"></video>
+<video controls src="d:\website\video2.mp4.mp4"></video>
+</div>
+</section>
 
-<input name="Name" placeholder="Full Name" required>
-<input name="Phone" placeholder="Mobile Number" required>
-<input name="Email" placeholder="Email">
-
-<select name="City" required>
-<option value="">Select City</option>
-<option>Mumbai</option>
-<option>Pune</option>
-<option>Thane</option>
-<option>Navi Mumbai</option>
-<option>Nagpur</option>
-<option>Nashik</option>
-<option>Aurangabad</option>
-<option>Kolhapur</option>
-<option>Satara</option>
-<option>Sangli</option>
-<option>Solapur</option>
-<option>Ratnagiri</option>
-<option>Sindhudurg</option>
-<option>Raigad</option>
-<option>Alibag</option>
-<option>Panvel</option>
-<option>Latur</option>
-<option>Beed</option>
-<option>Jalgaon</option>
-<option>Dhule</option>
-<option>Akola</option>
-<option>Amravati</option>
-</select>
-
-<input name="Age" placeholder="Age">
-
+<section id="form" class="section">
+<h2 style="text-align:center;color:var(--gold);font-size:46px;">Book Site Visit</h2>
+<div class="form-box">
+<form>
+<input placeholder="Full Name">
+<input placeholder="Mobile Number">
+<select><option>Mumbai</option><option>Pune</option><option>Nagpur</option></select>
 <button class="btn" style="width:100%">Send Enquiry</button>
 </form>
+</div>
 </section>
 
 <a class="whatsapp" href="https://wa.me/919619160660" target="_blank">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<footer>© 2026 Shree Swami Developer</footer>
+<footer>© 2026 SHREE SWAMI DEVELOPER</footer>
 
 </body>
 </html>
-
-
-
